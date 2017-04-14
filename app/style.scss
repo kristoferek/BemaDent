@@ -1,0 +1,394 @@
+.wrapper{
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.btn{
+  font-size: 0.9em;
+  height: 40px;
+  padding: 6px 20px;
+}
+
+.brdTopGray{
+  border-top: solid 1px $gray-light;
+}
+
+#aboveTop.navbar{
+  font-size: 0.75em;
+  min-height: 30px;
+  margin: 0;
+  border-bottom: white solid 1px;
+  .navbar-left > li{
+    padding-right: 15px;
+  }
+  .navbar-right li:last-of-type a{
+    padding-right: 0;
+  }
+}
+
+#mainMenu {
+  margin-top: 20px;
+  .navbar-brand{
+    padding: 0;
+    img{
+      height: 50px;
+      padding: 0 30px 0 0;
+
+    }
+  }
+}
+
+#mainSlider{
+  width: 100%;
+  max-height: 850px;
+  min-height: 250px;
+  background-image: url('./images/mainslider_photo_bg.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+  .leftArrow, .rightArrow{
+    height: calc(100vw / 2.25);
+    font-size: calc(100vw / 2.25 / 7);
+    font-weight: 100;
+    color: $gray-lighter;
+    text-align: center;
+    padding-top: calc(100vw / 2.25 / 7 * 3)
+  }
+  h1{
+    font-weight: 100;
+    // letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: justify;
+    line-height: 1.3;
+    font-size: 2em;
+
+    padding-top: 0;
+    @media (min-width: $screen-sm-min) {
+      font-size: 3.0em;
+      padding-top: 20px;
+    }
+    @media (min-width: $screen-md-min) {
+      font-size: 3.5em;
+      padding-top: 80px;
+    }
+    @media (min-width: $screen-lg-min) {
+      font-size: 4em;
+      padding-top: 200px;
+    }
+  }
+  p{
+    padding-top: 10px;
+    padding-bottom: 5px;
+    @media (min-width: $screen-md-min) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      line-height: 2;
+    }
+  }
+}
+
+#contact{
+  padding: calc(100vh / 8) 0;
+  .registration, .address{
+    border: solid 4px $gray-lighter;
+  }
+  .registration, .address, .slogan{
+    width: 100%;
+    min-height: 100px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    span{
+      color: $gray-light;
+    }
+    h3{
+      font-size: 1.8em;
+      font-weight: 700;
+      color: $brand-primary;
+    }
+    h4{
+      font-size: 1.5em;
+      font-weight: 300;
+    }
+  }
+  .slogan{
+    font-size: 1.55em;
+    font-weight: 300;
+    p{
+      padding-top: 20px;
+      font-size: 0.8em;
+      color: $gray-light;
+    }
+    @media (min-width: $screen-md-min) {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+#ourClinic{
+  position: relative;
+  margin-bottom: (100vh / 8);
+  background-color: $gray-lighter;
+  .description{
+    margin: 0 auto;
+    p{
+      font-size: 1.3em;
+      font-weight: 300;
+      text-align: center;
+      margin: 0;
+      padding: calc(100vh / 8) calc(100vh / 10) calc(100vh / 11) calc(100vh / 10);
+    }
+  }
+  .interiorSlider{
+    background-image: url("./images/bema_dent_clinic.png");
+    background-position: center top;
+    background-size: contain;
+    width: 100%;
+    height: calc(100vw / 3.15);
+    .next, .previous{
+      position: absolute;
+      z-index: 5;
+      width: calc(100vw / 3.15 / 8);
+      height: calc(100vw / 3.15 / 8);
+      background-color: white;
+      color: $gray-lighter;
+      text-align: center;
+      line-height: calc(100vw / 3.15 / 8 / 3);
+      font-size: calc(100vw / 3.15 / 8 / 3);
+      padding-top: calc(100vw / 3.15 / 8 / 3);
+      margin-top: calc(((100vw / 3.15) - (100vw / 3.15 / 8)) / 2);
+    }
+    .previous{
+      left: calc(100vw / 3.15 / 8 / 2 * (-1));
+    }
+    .next{
+      right: calc(100vw / 3.15 / 8 / 2 * (-1));
+    }
+  }
+  .interiorSliderPrevious, .interiorSliderNext{
+    background-image: url("./images/bema_dent_clinic_1.png");
+    background-position: right top;
+    background-size: cover;
+    opacity: 0.3;
+    width: 100%;
+    height: calc(100vw / 3.15);
+    position: relative;
+    z-index: 2;
+  }
+  .interiorSliderNext{
+    background-position: left top;
+  }
+}
+
+#offer{
+  background-image: url("./images/offer_bg.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  width: 100%;
+  height: calc(100vw / 3.20);
+  .offerTitle{
+    p{
+      color: $gray-light;
+    }
+    h5{
+      font-size: 1.4em;
+    }
+  }
+  .services{
+    margin-top: 30px;
+    // display: inline-block;
+    width: 100%;
+    min-height: 225px;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y:hidden;
+    .scrollingArrow{
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      right: 5vw;
+      top: 87px;
+      border-radius: 50%;
+      background-color: #fff;
+      box-shadow:0px 0px 10px $gray;
+      font-size: 24px;
+      padding-top: 9px;
+      text-align: center;
+      font-weight: 100;
+    }
+    .containerForScrolling{
+      width: 200%;
+      .offerBox{
+        float: left;
+        width: calc(100vw / 6.5);
+        min-width: 225px;
+        min-height: 225px;
+        border: solid 4px white;
+        background-color: $body-bg;
+        padding: 10px;
+        margin-right: 15px;
+        position: relative;
+        h5{
+          font-size: 1.2em;
+          font-weight: 700;
+        }
+        p{
+          font-size: 0.85em;
+          line-height: 1.65;
+        }
+        .readmore{
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+          text-transform: uppercase;
+          font-size: 0.9em;
+          font-weight: 700;
+          color: gray;
+        }
+      }
+    }
+  }
+}
+
+#financing{
+  background-color: $gray-light ;
+  padding: 30px 0;
+  width: 100%;
+  .financingTitle{
+    p{
+      color: $gray-dark;
+    }
+    h5{
+      font-size: 1.4em;
+    }
+  }
+  .financingCallToAction{
+    padding: 5px 0;
+    span{
+      margin: 15px;
+    }
+  }
+}
+
+#summary{
+  background-image: url("./images/services_bg.png");
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 664px;
+  color: #fff;
+  padding: 60px 10px;
+  @media (min-width: $screen-lg-min) {
+    height: 460px;
+    padding: 100px 0 0 0;
+
+  }
+  .borderRight{
+    border-right: solid 1px $gray-lighter;
+    @media (max-width: $screen-sm-min) {
+      border: none;
+    }
+  }
+  .borderLeft{
+    position: relative;
+    .navDots{
+      position: absolute;
+      z-index: 10;
+      right: 0;
+      top: 80px;
+      width: 20px;
+      height: 90px;
+      .dot{
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        border: solid 2px white;
+        margin-bottom: 10px;
+        &.active{
+          background-color: white;
+        }
+      }
+    }
+  }
+  .summaryTitle{
+    h2{
+      font-size: 2.5em;
+      margin-bottom: 10px;
+
+      font-weight: 400;
+    }
+  }
+  .summaryDescription{
+    p{
+      font-size: 1.2em;
+      line-height: 1.8em;
+      margin-top: 30px;
+      padding-right: 30px;
+    }
+  }
+  .summaryProceduresTitle{
+    padding: 0 30px;
+    h4{
+      margin-top: 20px;
+    }
+  }
+  .summaryProceduresList{
+    padding: 0 30px;
+    li{
+      font-size: 1.2em;
+      line-height: 1.8em;
+
+    }
+  }
+}
+
+footer{
+  padding: 80px 0 20px 0;
+  position: relative;
+  min-height: 200px;
+
+  ul, p{
+    margin-top: 20px;
+  }
+  p, li{
+    line-height: 2em;
+  }
+  li a, span{
+    color: $gray;
+  }
+  button#footerButton{
+    height: 80px;
+    border: none;
+    border-radius: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
+    background-color: $gray-lighter;
+    color: rgb(23, 94, 32);
+    font-weight: 400;
+    @media (min-width: $screen-sm-min){
+      position: absolute;
+      right: 0;
+      top: -120px;
+    }
+  }
+  p, li, span, h4 {
+    @media (max-width: $screen-sm-min) {
+    text-align: left;
+    padding-left: 20px;
+    }
+  }
+
+  // .footerContact{
+  //   text-align: left;
+  // }
+  // .footerNewsletter{
+  //   text-align: center;
+  // }
+  // .footerMenu{
+  //   text-align: right;
+  // }
+
+}
